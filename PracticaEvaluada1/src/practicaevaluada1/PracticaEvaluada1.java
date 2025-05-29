@@ -47,20 +47,22 @@ SEM y IVM.
         String lectura;
         double salario;
 
+        // Lee el salario 
         lectura = JOptionPane.showInputDialog("Digite su salario mensual: ");
         salario = Double.parseDouble(lectura);
         
+        //Hace los calculos del SEM y EL IVM
         double AbonoSEM = salario * 0.0925;
         double AbonoIVM = salario * 0.0508;
-        
+        //Suma los abonos a la ccss
         double AbonoCaja = AbonoSEM + AbonoIVM;
         
-        //double AbonoAso = salario * 0.025;
         
+        // Calcula el abono
         double AbonoAso = (salario - AbonoCaja) * 0.025;
-        
+        //Calcula variable muestra solicitada
         double varieblemuestra = AbonoCaja + AbonoAso;
-
+        // Imprime lo soloicitado en la prueba
         JOptionPane.showMessageDialog(null, "La empresa deberá abonar a la CCSS el monto de " + AbonoCaja + "por concepto de\n"
                 + "SEM y IVM.");
         
